@@ -1,6 +1,7 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 import { COLORS } from '../../../Constants'
+import CustomIcon from '../CustomIcon'
 
 
 const Header = ({
@@ -11,11 +12,28 @@ const Header = ({
         <View
             style={{
                 backgroundColor: COLORS.headerBackground,
-                height: 80,
-                width: width
+                height: 60,
+                width: width,
+                flexDirection: 'row',
+                justifyContent: 'flex-end',
+                alignItems: 'center',
+                paddingHorizontal: 10
             }}
         >
-
+            <CustomIcon
+                name={'cart'}
+                style={{
+                    fontSize: 24,
+                    paddingHorizontal: 5
+                }}
+            />
+            <CustomIcon
+                name={'heart'}
+                style={{
+                    fontSize: 24,
+                    paddingHorizontal: 5
+                }}
+            />
         </View>
     )
 }

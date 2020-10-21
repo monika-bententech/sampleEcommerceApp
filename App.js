@@ -6,14 +6,16 @@ import {
     createStackNavigator
 } from '@react-navigation/stack';
 import { SCREEN_ROUTES } from './src/Constants/routes';
+import { SCREEN_NAMES } from './src/Constants';
+import AppConfigComponent from './AppConfigComponent';
 
 const Stack = createStackNavigator();
 
 const App = () => {
     return (
-        <NavigationContainer ref={navigationRef}>
+        <NavigationContainer>
           <Stack.Navigator
-            initialRouteName={initialRoute.name}
+            initialRouteName={SCREEN_NAMES.home}
             screenOptions={{
               headerShown: false,
               animationEnabled: false,

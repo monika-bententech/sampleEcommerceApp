@@ -28,7 +28,8 @@ const AppConfigComponent = ({
                 <View
                     style={{
                         flex: 1,
-                        width: width
+                        width: width,
+                        backgroundColor: COLORS.white
                     }}
                 >
                     <Component />

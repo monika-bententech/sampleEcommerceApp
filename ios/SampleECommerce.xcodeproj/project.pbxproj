@@ -20,6 +20,7 @@
 		A72C5B3369D097908C4A681A /* libPods-SampleECommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C366143B6DEE7E4E5D7C48B9 /* libPods-SampleECommerce.a */; };
 		A8D0BBE026717C3B1283877B /* libPods-SampleECommerce-SampleECommerceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCFBD8B91C491778F171E1A /* libPods-SampleECommerce-SampleECommerceTests.a */; };
 		F6B8BFB796B623BD039131CD /* libPods-SampleECommerce-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369DA255ED9D2FBA21EAF011 /* libPods-SampleECommerce-tvOSTests.a */; };
+		421F60E651534F22A1C3D402 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF81D1A1C30645E791C496BC /* icomoon.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EF31964BB53ED1C2E9ACE3D5 /* Pods-SampleECommerce-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleECommerce-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleECommerce-tvOSTests/Pods-SampleECommerce-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF81D1A1C30645E791C496BC /* icomoon.ttf */ = {isa = PBXFileReference; name = "icomoon.ttf"; path = "../src/assets/fonts/icomoon.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				84C2DB893BD38AC033DB0E90 /* Pods */,
+				56115F5AA7D04650BFE0F8E9 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +200,15 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		56115F5AA7D04650BFE0F8E9 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				AF81D1A1C30645E791C496BC /* icomoon.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -342,6 +354,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				421F60E651534F22A1C3D402 /* icomoon.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
