@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
     NavigationContainer
 } from '@react-navigation/native';
@@ -11,9 +11,6 @@ const Stack = createStackNavigator();
 
 const App = () => {
     return (
-        <View
-        style={{flex: 1}}
-       >
         <NavigationContainer ref={navigationRef}>
           <Stack.Navigator
             initialRouteName={initialRoute.name}
@@ -36,7 +33,6 @@ const App = () => {
             })}
           </Stack.Navigator>
         </NavigationContainer>
-      </View>
     );
 }
 export default App;

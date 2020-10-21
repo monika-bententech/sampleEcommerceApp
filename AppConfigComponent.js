@@ -1,11 +1,13 @@
 import React from 'react'
-import { Platform, SafeAreaView, StatusBar, View } from 'react-native'
+import { Platform, SafeAreaView, StatusBar, useWindowDimensions, View } from 'react-native'
+import Header from './src/Components/Shared/Header'
 import { COLORS } from './src/Constants'
 
 const AppConfigComponent = ({
     routeData, ...rest
  }) => {
     const { component: Component } = routeData
+    const { width, height } = useWindowDimensions()
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.statusBar }}>
@@ -19,9 +21,18 @@ const AppConfigComponent = ({
              </View>
             }
             <View style={{
-                flex: 1
+                flex: 1,
+                width: width
             }}>
-            <Component />
+                <Header width={width} />
+                <View
+                    style={{
+                        flex: 1,
+                        width: width
+                    }}
+                >
+                    <Component />
+                </View>
             </View>
         </SafeAreaView>
         
