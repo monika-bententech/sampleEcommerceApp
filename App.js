@@ -1,107 +1,42 @@
-import 'react-native-gesture-handler';
-
-import React from 'react';
-
-import
-MaterialCommunityIcons
-    from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import React, { Component } from 'react';
 import {
     NavigationContainer
 } from '@react-navigation/native';
 import {
     createStackNavigator
 } from '@react-navigation/stack';
-import {
-    createBottomTabNavigator
-} from '@react-navigation/bottom-tabs';
-
-import CalendarScreen from './src/Screens/CalendarScreen';
-import ScanQRScreen from './src/Screens/ScanQRScreen';
-import CreateAppointmentScreen from './src/Screens/CreateAppointmentScreen';
-import PointsScreen from './src/Screens/PointsScreen';
+import { SCREEN_ROUTES } from './src/Constants/routes';
 
 const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
-
-const CalendarStack = () => {
-    return (
-        <Stack.Navigator
-            initialRouteName="Calendar"
-            screenOptions={{
-                headerStyle: { backgroundColor: '#04C4F4' },
-                headerTintColor: '#fff',
-                headerTitleStyle: { fontWeight: 'bold' }
-            }}>
-            <Stack.Screen
-                name="Calendar"
-                component={CalendarScreen}
-                options={{ title: 'Calendar' }} />
-            <Stack.Screen
-                name="ScanQR"
-                component={ScanQRScreen}
-                options={{ title: 'Scan QR' }} />
-            <Stack.Screen
-                name="CreateAppointment"
-                component={CreateAppointmentScreen}
-                options={{ title: 'Create Appointment' }} />
-        </Stack.Navigator>
-    );
-}
-
-const PointsStack = () => {
-    return (
-        <Stack.Navigator
-            initialRouteName="Points"
-            screenOptions={{
-                headerStyle: { backgroundColor: '#04C4F4' },
-                headerTintColor: '#fff',
-                headerTitleStyle: { fontWeight: 'bold' }
-            }}>
-            <Stack.Screen
-                name="Points"
-                component={PointsScreen}
-                options={{ title: 'Points' }} />
-        </Stack.Navigator>
-    );
-}
 
 const App = () => {
     return (
-        <NavigationContainer>
-            <Tab.Navigator
-                initialRouteName="Feed"
-                tabBarOptions={{
-                    activeTintColor: '#04C4F4',
-                }}>
-                <Tab.Screen
-                    name="CalendarStack"
-                    component={CalendarStack}
-                    options={{
-                        tabBarLabel: 'Calendar',
-                        tabBarIcon: ({ color, size }) => (
-                            <MaterialCommunityIcons
-                                name="calendar"
-                                color={color}
-                                size={size}
-                            />
-                        ),
-                    }} />
-                <Tab.Screen
-                    name="PointsStack"
-                    component={PointsStack}
-                    options={{
-                        tabBarLabel: 'Points',
-                        tabBarIcon: ({ color, size }) => (
-                            <MaterialCommunityIcons
-                                name="scoreboard-outline"
-                                color={color}
-                                size={size}
-                            />
-                        ),
-                    }} />
-            </Tab.Navigator>
+        <View
+        style={{flex: 1}}
+       >
+        <NavigationContainer ref={navigationRef}>
+          <Stack.Navigator
+            initialRouteName={initialRoute.name}
+            screenOptions={{
+              headerShown: false,
+              animationEnabled: false,
+            }}>
+            {SCREEN_ROUTES.map((route) => {
+                const ConfiguredComponent = (props) => {
+                    return <AppConfigComponent {...props} routeData={route} />;
+                };
+
+              return (
+                <Stack.Screen
+                  key={route.key}
+                  name={route.name}
+                  component={ConfiguredComponent}
+                />
+              );
+            })}
+          </Stack.Navigator>
         </NavigationContainer>
+      </View>
     );
 }
 export default App;
