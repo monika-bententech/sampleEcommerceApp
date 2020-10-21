@@ -10,5 +10,6 @@ export const SCREEN_ROUTES = [
     name: SCREEN_NAMES.productDetail,
     key: "product_details",
     component: ProductDetails,
+    back: true
   },
 ];

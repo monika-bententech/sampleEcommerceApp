@@ -6,7 +6,7 @@ import { COLORS } from './src/Constants'
 const AppConfigComponent = ({
     routeData, ...rest
  }) => {
-    const { component: Component } = routeData
+    const { component: Component, back } = routeData
     const { width, height } = useWindowDimensions()
 
     return (
@@ -24,7 +24,7 @@ const AppConfigComponent = ({
                 flex: 1,
                 width: width
             }}>
-                <Header width={width} />
+                <Header width={width} back={back} />
                 <View
                     style={{
                         flex: 1,
