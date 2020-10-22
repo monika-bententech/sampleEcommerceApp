@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useRoute } from '@react-navigation/native'
 import React from 'react'
 import { Text, View } from 'react-native'
 import { COLORS, SCREEN_NAMES } from '../../../Constants'
@@ -11,6 +11,7 @@ const Header = ({
     back
 }) => {
     const navigation = useNavigation()
+const route = useRoute()
 
     return (
         <View
@@ -60,13 +61,15 @@ const Header = ({
                 name={'heart'}
                 style={{
                     fontSize: 24,
-                    paddingHorizontal: 5
+                    paddingHorizontal: 5,
+                    color: route.name === SCREEN_NAMES.wishlist ? COLORS.white : COLORS.black
                 }}
             />
             <Text
                 style={{
                     fontSize: 10,
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    color: route.name === SCREEN_NAMES.wishlist ? COLORS.white : COLORS.black
                 }}
             >
                 Wishlist
@@ -87,13 +90,15 @@ const Header = ({
                 name={'cart'}
                 style={{
                     fontSize: 24,
-                    paddingHorizontal: 5
+                    paddingHorizontal: 5,
+                    color: route.name === SCREEN_NAMES.cart ? COLORS.white : COLORS.black
                 }}
             />
             <Text
                 style={{
                     fontSize: 10,
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    color: route.name === SCREEN_NAMES.cart ? COLORS.white : COLORS.black
                 }}
             >
                 Cart

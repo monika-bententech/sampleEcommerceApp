@@ -7,75 +7,76 @@ import {
   useWindowDimensions,
   Pressable,
 } from "react-native";
-import { PRODUCT_LIST, COLORS } from "../../Constants";
+import { useRoute } from "@react-navigation/native";
+import { COLORS } from "../../Constants";
 
 import style from "./style";
 
-const { name, qty, desc, price, imgSrc } = PRODUCT_LIST[0];
-
-const ProductDetails = (/* { name, qty, description, price, imgSrc } */) => {
+const ProductDetails = () => {
   const { width } = useWindowDimensions();
-  const containerWidth = width - 40;
+  const { product = {} } = useRoute().params;
+  const { name = "", qty = 0, desc = "", price = 0, imgSrc = null } = product;
+  const containerWidth = width;
 
   return (
     <ScrollView
-      contentContainerStyle={{
+      style={{
         flex: 1,
+        width: containerWidth,
+        paddingHorizontal: 20,
+      }}
+      contentContainerStyle={{
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <View
+      <Text style={{ color: COLORS.black, paddingVertical: 10, fontSize: 17 }}>
+        {name}
+      </Text>
+      <Image
+        style={{ width: containerWidth, height: containerWidth }}
+        source={imgSrc}
+      />
+      <Text
+        style={{ color: COLORS.black, paddingVertical: 10, fontSize: 30 }}
+      >{`USD ${price}`}</Text>
+      <Text
         style={{
-          paddingTop: 20,
-          width: containerWidth,
-          flex: 1,
+          color: COLORS.black,
+          paddingVertical: 10,
+          fontSize: 20,
+          textAlign: "left",
         }}
       >
-        <Text
-          style={{ color: COLORS.black, paddingVertical: 10, fontSize: 17 }}
-        >
-          {name}
+        {desc}
+      </Text>
+      <Pressable
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "orange",
+          borderRadius: 5,
+          width: "100%",
+          marginTop: 20,
+        }}
+      >
+        <Text style={{ paddingVertical: 15, fontSize: 20 }}>
+          Add to Wishlist
         </Text>
-        <Image
-          style={{ width: containerWidth, height: containerWidth }}
-          source={imgSrc}
-        />
-        <Text
-          style={{ color: COLORS.black, paddingVertical: 10, fontSize: 30 }}
-        >{`USD ${price}`}</Text>
-        <Text
-          style={{
-            color: COLORS.black,
-            paddingVertical: 10,
-            fontSize: 20,
-            textAlign: "left",
-          }}
-        >
-          {desc}
-        </Text>
-        <Pressable
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "orange",
-            borderRadius: 5,
-          }}
-        >
-          <Text style={{paddingVertical: 15,fontSize:20  }}>Add to Wishlist</Text>
-        </Pressable>
-        <Pressable
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "orange",
-            borderRadius: 5,
-            marginTop:20
-          }}
-        >
-          <Text style={{ paddingVertical: 15,fontSize:20 }}>Add to Cart</Text>
-        </Pressable>
-      </View>
+      </Pressable>
+      <Pressable
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "orange",
+          borderRadius: 5,
+          marginVertical: 20,
+          width: "100%",
+        }}
+        onPress={() => console.log("sadasd")}
+      >
+        <Text style={{ paddingVertical: 15, fontSize: 20 }}>Add to Cart</Text>
+      </Pressable>
     </ScrollView>
   );
 };
