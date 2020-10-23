@@ -10,6 +10,7 @@ export const SCREEN_NAMES = {
   cart: "Shopping Cart",
   wishlist: "Wishlist",
   productDetail: "Product Detail",
+  viewWishLists:'View WishLists'
 };
 
 export const COLORS = {
@@ -31,5 +32,14 @@ export const PRODUCT_LIST = [
   { id: "key_8", name: "IMac i5 10th gen", imgSrc: Pic2, price: 600, qty: 10 ,desc:'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.'},
   { id: "key_9", name: "Fresh Potato", imgSrc: Pic3, price: 700, qty: 10 ,desc:'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.'},
   { id: "key_10", name: "KTM Sport Bike", imgSrc: Pic4, price: 1200, qty: 10 ,desc:'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.'},
+];
+
+export const WISH_LIST = [
+  { id: "key_1", name: "Shirts", imgSrc: Pic1, type:'Default | Private' },
+  { id: "key_2", name: "Shoes", imgSrc: Pic2, type:'Default | Private'},
+  { id: "key_3", name: "Shopping List", imgSrc: Pic3, type:'Default'},
+  { id: "key_4", name: "Grocery List", imgSrc: Pic4,type:'Private'},
+  { id: "key_5", name: "Sketching Accessories", imgSrc: Pic3, type:'Default'},
+  { id: "key_6", name: "Wife's Shopping List", imgSrc: Pic4,type:'Private'},
 ];
     

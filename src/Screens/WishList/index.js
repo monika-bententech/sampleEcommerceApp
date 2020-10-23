@@ -1,82 +1,49 @@
 import React from "react";
-import {
-  View,
-  ScrollView,
-  Text,
-  Image,
-  useWindowDimensions,
-  Pressable,
-} from "react-native";
-import { PRODUCT_LIST, COLORS } from "../../Constants";
+import { View, ScrollView, Text, Pressable } from "react-native";
+import { WISH_LIST, COLORS } from "../../Constants";
+import WishListCard from "./WishListCard";
 
-import style from "./style";
-
-const { name, qty, desc, price, imgSrc } = PRODUCT_LIST[0];
-
-const WishList = (/* { name, qty, description, price, imgSrc } */) => {
-  const { width } = useWindowDimensions();
-  const containerWidth = width - 40;
-
+const WishList = () => {
   return (
-    <ScrollView
-      contentContainerStyle={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <View style={{ flex: 1, alignItems: "center" }}>
       <View
         style={{
-          paddingTop: 20,
-          width: containerWidth,
-          flex: 1,
+          flexDirection: "row",
+          justifyContent: "space-between",
+          width: "100%",
+          paddingHorizontal: 20,
+          height: 60,
+          alignItems: "center",
+          borderBottomWidth: 1,
+          borderColor: COLORS.grey,
         }}
       >
-        <Text
-          style={{ color: COLORS.black, paddingVertical: 10, fontSize: 17 }}
-        >
-          {name}
-        </Text>
-        <Image
-          style={{ width: containerWidth, height: containerWidth }}
-          source={imgSrc}
-        />
-        <Text
-          style={{ color: COLORS.black, paddingVertical: 10, fontSize: 30 }}
-        >{`POINTS ${price}`}</Text>
-        <Text
-          style={{
-            color: COLORS.black,
-            paddingVertical: 10,
-            fontSize: 20,
-            textAlign: "left",
-          }}
-        >
-          {desc}
-        </Text>
-        <Pressable
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "orange",
-            borderRadius: 5,
-          }}
-        >
-          <Text style={{paddingVertical: 15,fontSize:20  }}>Add to Wishlist</Text>
-        </Pressable>
-        <Pressable
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "orange",
-            borderRadius: 5,
-            marginTop:20
-          }}
-        >
-          <Text style={{ paddingVertical: 15,fontSize:20 }}>Add to Cart</Text>
+        <Text style={{ fontWeight: "600", fontSize: 18 }}>Wish List</Text>
+        <Pressable>
+          <Text style={{ fontWeight: "400", fontSize: 18, color: "teal" }}>
+            + Create a Wish List
+          </Text>
         </Pressable>
       </View>
-    </ScrollView>
+      <ScrollView
+        style={{
+          flex: 1,
+        }}
+        contentContainerStyle={{
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {WISH_LIST.map((item, index) => (
+          <WishListCard
+            key={`${item.name}_${index}`}
+            name={item.name}
+            imgSrc={item.imgSrc}
+            type={item.type}
+          />
+        ))}
+      </ScrollView>
+    </View>
   );
 };
 
