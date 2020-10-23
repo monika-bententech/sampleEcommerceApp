@@ -17,10 +17,10 @@
 		2DCD954D1E0B4F2C00145EB5 /* SampleECommerceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SampleECommerceTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		87F3F5176C9803B2F06FD026 /* libPods-SampleECommerce-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 804D9B0A010BE5D6E7E03D6D /* libPods-SampleECommerce-tvOS.a */; };
+		A0F28FCE2541FEEA00F1B439 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0F28FCD2541FEEA00F1B439 /* icomoon.ttf */; };
 		A72C5B3369D097908C4A681A /* libPods-SampleECommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C366143B6DEE7E4E5D7C48B9 /* libPods-SampleECommerce.a */; };
 		A8D0BBE026717C3B1283877B /* libPods-SampleECommerce-SampleECommerceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCFBD8B91C491778F171E1A /* libPods-SampleECommerce-SampleECommerceTests.a */; };
 		F6B8BFB796B623BD039131CD /* libPods-SampleECommerce-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369DA255ED9D2FBA21EAF011 /* libPods-SampleECommerce-tvOSTests.a */; };
-		421F60E651534F22A1C3D402 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF81D1A1C30645E791C496BC /* icomoon.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +60,7 @@
 		804D9B0A010BE5D6E7E03D6D /* libPods-SampleECommerce-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleECommerce-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SampleECommerce/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D9A41E90B00697941ED7AF4 /* Pods-SampleECommerce-SampleECommerceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleECommerce-SampleECommerceTests.release.xcconfig"; path = "Target Support Files/Pods-SampleECommerce-SampleECommerceTests/Pods-SampleECommerce-SampleECommerceTests.release.xcconfig"; sourceTree = "<group>"; };
+		A0F28FCD2541FEEA00F1B439 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icomoon.ttf; path = ../src/assets/fonts/icomoon.ttf; sourceTree = "<group>"; };
 		AFC8085C9D8F8D07DBDC295C /* Pods-SampleECommerce-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleECommerce-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SampleECommerce-tvOSTests/Pods-SampleECommerce-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA718FBBA634A13A68C986D3 /* Pods-SampleECommerce-SampleECommerceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleECommerce-SampleECommerceTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleECommerce-SampleECommerceTests/Pods-SampleECommerce-SampleECommerceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C366143B6DEE7E4E5D7C48B9 /* libPods-SampleECommerce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleECommerce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +69,6 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EF31964BB53ED1C2E9ACE3D5 /* Pods-SampleECommerce-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleECommerce-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleECommerce-tvOSTests/Pods-SampleECommerce-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AF81D1A1C30645E791C496BC /* icomoon.ttf */ = {isa = PBXFileReference; name = "icomoon.ttf"; path = "../src/assets/fonts/icomoon.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +151,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		56115F5AA7D04650BFE0F8E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0F28FCD2541FEEA00F1B439 /* icomoon.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,18 +205,8 @@
 				EF31964BB53ED1C2E9ACE3D5 /* Pods-SampleECommerce-tvOSTests.debug.xcconfig */,
 				AFC8085C9D8F8D07DBDC295C /* Pods-SampleECommerce-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		56115F5AA7D04650BFE0F8E9 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				AF81D1A1C30645E791C496BC /* icomoon.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -352,9 +350,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0F28FCE2541FEEA00F1B439 /* icomoon.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				421F60E651534F22A1C3D402 /* icomoon.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

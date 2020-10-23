@@ -39,7 +39,7 @@ const ProductDetails = () => {
       />
       <Text
         style={{ color: COLORS.black, paddingVertical: 10, fontSize: 30 }}
-      >{`USD ${price}`}</Text>
+      >{`POINTS ${price}`}</Text>
       <Text
         style={{
           color: COLORS.black,
