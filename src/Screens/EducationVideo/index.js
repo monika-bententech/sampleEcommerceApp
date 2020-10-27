@@ -15,10 +15,11 @@ import { useNavigation } from '@react-navigation/native'
 
 const EducationVideo = ({}) => {
     const navigation = useNavigation()
-
+    const {width}  = useWindowDimensions()
+   
   return (
-    <View style={{ flex: 1, backgroundColor: "yellow" }}>
-      <CustomVideoPlayer src={Video1} />
+    <View style={{ flex: 1,justifyContent:'center',alignItems:'center' }}>
+      <CustomVideoPlayer height={300} width={width} controls={true} src={Video1} />
     </View>
   );
 };
