@@ -4,6 +4,7 @@ import ProductDetails from "../Screens/ProductDetails";
 import Cart from '../Screens/Cart';
 import WishList from "../Screens/WishList";
 import Education from '../Screens/Education';
+import EducationVideo from '../Screens/EducationVideo';
 
 export const SCREEN_ROUTES = [
   { name: SCREEN_NAMES.home, key: "home_screen", component: Home },
@@ -17,4 +18,5 @@ export const SCREEN_ROUTES = [
     component: ProductDetails,
     back: true
   },
+  { name: SCREEN_NAMES.educationvideo, key: "education_video", component: EducationVideo,back: true },
 ];

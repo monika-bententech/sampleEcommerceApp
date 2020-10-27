@@ -12,6 +12,7 @@ export const SCREEN_NAMES = {
   productDetail: "Product Detail",
   viewWishLists:'View WishLists',
   education: "Education",
+  educationvideo:"Education Video"
 };
 
 export const COLORS = {
