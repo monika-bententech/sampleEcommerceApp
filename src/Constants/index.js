@@ -10,7 +10,8 @@ export const SCREEN_NAMES = {
   cart: "Shopping Cart",
   wishlist: "Wishlist",
   productDetail: "Product Detail",
-  viewWishLists:'View WishLists'
+  viewWishLists:'View WishLists',
+  education: "Education",
 };
 
 export const COLORS = {

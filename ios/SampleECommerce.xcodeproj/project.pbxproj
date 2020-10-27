@@ -17,7 +17,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* SampleECommerceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SampleECommerceTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		87F3F5176C9803B2F06FD026 /* libPods-SampleECommerce-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 804D9B0A010BE5D6E7E03D6D /* libPods-SampleECommerce-tvOS.a */; };
-		A0F28FCE2541FEEA00F1B439 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0F28FCD2541FEEA00F1B439 /* icomoon.ttf */; };
+		A0BEB3A72542E25400053847 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0BEB3A62542E25400053847 /* icomoon.ttf */; };
 		A72C5B3369D097908C4A681A /* libPods-SampleECommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C366143B6DEE7E4E5D7C48B9 /* libPods-SampleECommerce.a */; };
 		A8D0BBE026717C3B1283877B /* libPods-SampleECommerce-SampleECommerceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCFBD8B91C491778F171E1A /* libPods-SampleECommerce-SampleECommerceTests.a */; };
 		F6B8BFB796B623BD039131CD /* libPods-SampleECommerce-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369DA255ED9D2FBA21EAF011 /* libPods-SampleECommerce-tvOSTests.a */; };
@@ -60,7 +60,7 @@
 		804D9B0A010BE5D6E7E03D6D /* libPods-SampleECommerce-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleECommerce-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SampleECommerce/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D9A41E90B00697941ED7AF4 /* Pods-SampleECommerce-SampleECommerceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleECommerce-SampleECommerceTests.release.xcconfig"; path = "Target Support Files/Pods-SampleECommerce-SampleECommerceTests/Pods-SampleECommerce-SampleECommerceTests.release.xcconfig"; sourceTree = "<group>"; };
-		A0F28FCD2541FEEA00F1B439 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icomoon.ttf; path = ../src/assets/fonts/icomoon.ttf; sourceTree = "<group>"; };
+		A0BEB3A62542E25400053847 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icomoon.ttf; path = ../../../../../../../Downloads/icomoon/fonts/icomoon.ttf; sourceTree = "<group>"; };
 		AFC8085C9D8F8D07DBDC295C /* Pods-SampleECommerce-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleECommerce-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SampleECommerce-tvOSTests/Pods-SampleECommerce-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA718FBBA634A13A68C986D3 /* Pods-SampleECommerce-SampleECommerceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleECommerce-SampleECommerceTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleECommerce-SampleECommerceTests/Pods-SampleECommerce-SampleECommerceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C366143B6DEE7E4E5D7C48B9 /* libPods-SampleECommerce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleECommerce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +154,7 @@
 		56115F5AA7D04650BFE0F8E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A0F28FCD2541FEEA00F1B439 /* icomoon.ttf */,
+				A0BEB3A62542E25400053847 /* icomoon.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -350,7 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0F28FCE2541FEEA00F1B439 /* icomoon.ttf in Resources */,
+				A0BEB3A72542E25400053847 /* icomoon.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
