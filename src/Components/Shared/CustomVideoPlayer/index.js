@@ -23,7 +23,6 @@ const CustomVideoPlayer = ({ src, height, width, style, ...props }) => {
   const containerWidth = width || 400;
   const containerHeight = (height || 300) + 100;
   let initialLoad = useRef(true).current;
-  let videoRef = React.createRef();
   const [orientation, setOrientation] = useState(isPortrait() ? 'portrait' : 'landscape');
   const [isPaused, setIsPaused] = useState(false);
   const handleOnProgress = () => {
@@ -32,6 +31,7 @@ const CustomVideoPlayer = ({ src, height, width, style, ...props }) => {
       setIsPaused(true);
     }
   };
+
   useEffect(() => {
     const handleListener = () => {
       setOrientation(isPortrait() ? 'portrait' : 'landscape')
@@ -53,7 +53,6 @@ const CustomVideoPlayer = ({ src, height, width, style, ...props }) => {
     //   }}
     // >
       <Video
-        ref={videoRef}
         {...props}
         onProgress={handleOnProgress}
         paused={isPaused}
