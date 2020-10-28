@@ -4,11 +4,12 @@ import thuimbnail1 from "../../assets/Images/thumnail1.jpg";
 import { useNavigation } from "@react-navigation/native";
 import { SCREEN_NAMES } from "../../Constants";
 
-const VideoCard = ({ title, points }) => {
+const VideoCard = ({ data }) => {
+  const { title, description, points, videoStreem } = data || {};
   const navigation = useNavigation();
   const handleOnPress = () => {
     navigation.navigate(SCREEN_NAMES.educationvideo, {
-      //   product: product
+        videoData: data
     });
   };
 
